@@ -47,11 +47,14 @@ export default function Signup() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/auth/signup", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
+      const res = await fetch(
+        import.meta.env.VITE_BACKEND_URL + "/auth/signup",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(form),
+        }
+      );
 
       let data = {};
       try {
@@ -141,7 +144,7 @@ export default function Signup() {
               )}
             </div>
 
-            {/* ROLE (UPDATED WITH ADMIN OPTION) */}
+            {/* ROLE */}
             <div>
               <label className="text-sm small-muted">Role</label>
               <select name="role" value={form.role} onChange={onChange}>
