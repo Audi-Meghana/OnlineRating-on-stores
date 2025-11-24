@@ -23,7 +23,7 @@ app.use("/auth", require("./routes/authRoutes"));
 app.use("/users", require("./routes/userRoutes"));
 app.use("/stores", require("./routes/storeRoutes"));
 app.use("/ratings", require("./routes/ratingRoutes"));
-app.use("/admin", require("./routes/adminRoutes"));
+app.use("/admin", require("./routes/adminroutes"));
 
 
 // ===== HEALTH CHECK =====
